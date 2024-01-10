@@ -64,11 +64,11 @@ def delete_transaction(transaction_id):
     # Find the transaction with the matching ID and remove it from the list
     for transaction in transactions:
         if transaction['id'] == transaction_id:
-            transaction.remove(transaction)
+            transactions.remove(transaction)
             break
 
     # Redirect to the transactions list page
-    return redirect(url_for("get_tranasctions"))
+    return redirect(url_for("get_transactions"))
 
 # Run the Flask app
 if __name__ == "__main__":
